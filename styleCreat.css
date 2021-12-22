@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('http://fonts.cdnfonts.com/css/sweet-child-script');
+
+body{
+  background-image: url("img/working.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+h1 {
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;
+    top: 50%;
+}
