@@ -2,7 +2,7 @@
 @import url('http://fonts.cdnfonts.com/css/sweet-child-script');
 
 body{
-  background-image: url("img/working.jpg");
+  background-color: azure;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,4 +17,17 @@ h1 {
     position: fixed;
     font-family: 'Montserrat', sans-serif;
     top: 50%;
+}
+
+i.close-icon {
+  height: 100%;
+  width: 100%;
+}
+
+i.success{
+  background-color: green;
+}
+
+i.error{
+  background-color: red;
 }
