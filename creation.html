@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleCreat.css">
-    <title>Creaton</title>
+    <title>Creation</title>
 </head>
 <body>
 
@@ -18,16 +18,17 @@
     <h1>Working...</h1> 
 
     <div id="bottom">
-        <a v-bind:href="link" v-bind:title="message" :style="style()">{{message}}</a>
-        <!-- <ul>
+        <a v-bind:href="link" v-bind:title="message">{{message}}</a>
+        <!-- <ul> :style="style()"
             <li v-for="person in persons">{{person}}</li>
         </ul> -->
         <input type="text" v-model="message"> 
+        {{message}}
         <!-- -- v-model : variable affecté au champ -->
         <input type="checkbox" v-model="cls" :true-value="'success'" :false-value="'error'"> 
         <div class="condition">
-            <i class="close-icon" :class="cls" @click="close">.</i>
-            <p @click="close">{{message}}</p>
+            <i class="close-icon" :class="cls" @click.self="close">.</i>
+            <p @click.stop="close">{{message}}</p>
         </div>
         <!-- <div class="condition" v-else="success">
             <p>Gros looseur</p>
@@ -36,9 +37,13 @@
         {{persons}}
     </div> 
 
+    <div>
+        <p>TESTESTEST</p>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js"></script> 
 
 </body>
 </html>

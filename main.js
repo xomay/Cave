@@ -4,11 +4,12 @@ let vm = new Vue({
         message: "Welcome everybody",
         link: "https://vuejs.org/",
         cls: 'success',
+        success: true,
         persons: ['Mathys', 'Cesar', 'Celian', 'Mattis'],
         // style: { background: '#3A961C'}
     },
 
-    methods: {
+    computed: {
         close: function () {
             this.success = false
             this.message = "fermé"

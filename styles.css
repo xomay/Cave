@@ -200,9 +200,16 @@ button.choice-button {
   height: 170px;
   border-radius: 15px;
   border: none;
-  background-color: var(--secondary-blue);
   transition: all 0.5s ease;
   margin: 2em;
+}
+
+button.check {
+  background-color: var(--theme-orange);
+}
+
+button.uncheck {
+  background-color: var(--secondary-blue);
 }
 
 button.choice-button > img {

@@ -30,36 +30,36 @@
             <div class="content">
                 <h3>Criteres</h3>
                 <button class="next">1/3 -></button>
-                <div class="choice">
-                    <button class="choice-button">
+                <div class="choice" id="choice">
+                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meat.png" alt="viande">
                         <h3>Viandes Rouges</h3>
                     </button>
-                    <button class="choice-button">
+                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meat.png" alt="viande">
                         <h3>Viandes Rouges</h3>
                     </button>
-                    <button class="choice-button">
+                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meat.png" alt="viande">
                         <h3>Viandes Rouges</h3>
                     </button>
-                    <button class="choice-button">
+                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meat.png" alt="viande">
                         <h3>Viandes Rouges</h3>
                     </button>
-                    <button class="choice-button">
+                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meat.png" alt="viande">
                         <h3>Viandes Rouges</h3>
                     </button>
-                    <button class="choice-button">
+                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meat.png" alt="viande">
                         <h3>Viandes Rouges</h3>
                     </button>
-                    <button class="choice-button">
+                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meat.png" alt="viande">
                         <h3>Viandes Rouges</h3>
                     </button>
-                    <button class="choice-button">
+                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meat.png" alt="viande">
                         <h3>Viandes Rouges</h3>
                     </button>
@@ -162,6 +162,10 @@
             });
         });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="mainIndex.js"></script>
+
     <!-- <article class="main">
         <h3>Criteres</h3>
         <button>
