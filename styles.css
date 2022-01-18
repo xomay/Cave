@@ -181,18 +181,25 @@ button.next:hover {
   box-shadow: 1px 5px 15px rgba(255, 134, 0, 0.5);
 }
 
+.choice::-webkit-scrollbar {
+    display: none;
+}
+
 div.choice {
-  /* display: flex; */
-  position: relative;
+  display: flex;
+  position: absolute;
   top: 10%;
-  /* align-items: flex-start; */
+  align-items: flex-start;
   /* justify-content: space-around; */
+  flex-wrap: wrap;
   max-width: 90%;
-  width: auto;
-  height: auto;
+  height: 70%;
   min-height: 80%;
-  /* flex-wrap: wrap; */
-  margin-top: 1.5vw;
+  /* margin-top: 1.5vw; */
+  /* float: left; */
+  /* display: table-cell; */
+  overflow-y: scroll;
+
 }
 
 button.choice-button {
