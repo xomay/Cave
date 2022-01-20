@@ -17,11 +17,15 @@
   --secondary-blue: rgba(117, 139, 253, 1);
   --tertiary-blue: rgba(174, 184, 254, 1);
   --theme-orange: rgba(255, 134, 0, 1);
-  --theme-white: rgba(241, 242, 246, 1);
+  --theme-white: rgb(241, 242, 246);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body{
-  background-image: url("background.png");
+  background-image: url("img/background.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,8 +41,16 @@ body{
 }
 
 
+nav {
+  background-color: rgba(219, 198, 200, 0.90);
+}
 
-
+div.toTop {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 100%;
+}
 /* Les boites*/
 
 .header {
@@ -217,7 +229,8 @@ button.uncheck {
 }
 
 button.choice-button > img {
-  width: 65%;
+  width: auto;
+  height: 35%;
 }
 
 button.choice-button > h3 {
