@@ -53,12 +53,6 @@ div.toTop {
 }
 /* Les boites*/
 
-.header {
-  background: var(--secondary);
-  padding: 20px;
-  margin-bottom: 50px;
-}
-
 .main {
   background: var(--tertiary);
 }
@@ -169,7 +163,7 @@ div.layer {
   height: 100%;
   width: 100%;
   z-index: 1;
-  top: 70px;
+  top: 7vh;
 }
 
 button.next {

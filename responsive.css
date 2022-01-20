@@ -1,13 +1,49 @@
 @media screen and (max-width: 1000px) {
     nav{
         visibility: hidden;
+        height: 1px;
     }
 
     ul.TopNavbar {
         visibility: hidden;
+        height: 1px;
     }
 
     li.navbar {
         visibility: hidden;
     }
+
+    div.content {
+        z-index: 10;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: 8vh;
+        border-radius: 25px 25px 0px 0px;
+        margin: 0;
+        transition: all 0.3s ease;
+    }
+
+    div.content:hover {
+        background-color: var(--secondary-blue);
+        box-shadow: 0px -10px 15px rgba(117, 139, 253, 0.5);
+    }
+
+    button.next {
+        visibility: hidden;
+    }
+
+    div.choice {
+        visibility: hidden;
+    }
+
+    div.layer { 
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        /* Optional, if you want the DIVs 100% width: */ 
+        flex-direction: column;
+    }
+    div.layer > #content { order: 2; }
+    div.layer > #result { order: 1; }
 }
