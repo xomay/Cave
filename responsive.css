@@ -1,0 +1,13 @@
+@media screen and (max-width: 1000px) {
+    nav{
+        visibility: hidden;
+    }
+
+    ul.TopNavbar {
+        visibility: hidden;
+    }
+
+    li.navbar {
+        visibility: hidden;
+    }
+}

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
-@import url('http://fonts.cdnfonts.com/css/sweet-child-script');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600&display=swap');
 
 
 * {
@@ -42,7 +42,7 @@ body{
 
 
 nav {
-  background-color: rgba(219, 198, 200, 0.90);
+  background-color: rgba(229, 213, 205, 0.90);
 }
 
 div.toTop {
@@ -114,6 +114,7 @@ ul.TopNavbar {
   justify-content: center;
   padding: 0%;
   align-items: center;
+  visibility: visible;
 }
 
 nav {
@@ -333,10 +334,11 @@ div.top-card > h5{
 
 div.top-card > h3{
   position: absolute;
-  top: 45px;
-  left: 48%;
+  top: 18%;
+  right: -23%;
   margin: 0;
-  font-family: 'Sweet Child Script', sans-serif;
+  font-family: 'Dancing Script', sans-serif;
+  font-weight: bold;
   font-size: 110px;
   letter-spacing: 0.05em;
   line-height: 178px;
@@ -385,3 +387,4 @@ h6.nombre {
 
 /* nombre bouteilles
 +cepage */
+
