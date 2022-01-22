@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
 * {
   box-sizing: border-box;
@@ -37,7 +37,6 @@ body{
 .navbar:hover{
   background-color: var(--theme-orange);
   color: white;
-  border-radius: 25px;
 }
 
 
@@ -46,7 +45,7 @@ nav {
 }
 
 div.toTop {
-  position: absolute;
+  position: absolute; 
   top: 0;
   height: 1px;
   width: 100%;
@@ -87,6 +86,7 @@ div.toTop {
   text-decoration: none;
   /* padding: 0.2em 0.5em; */
   padding: 13px;
+  border-radius: 25px;
 }
 
 .navbar > a{
@@ -136,7 +136,7 @@ div.content {
   display: flex;
   width: 76vw;
   height: 35em;
-  background-color: var(--primary-blue);
+  background-color: rgba(39, 24, 126, 0.95);
   flex-direction: row;
   justify-content: center;
   padding: 0%;
@@ -145,6 +145,8 @@ div.content {
   opacity: 0.92;
   border-radius: 62px;
   /* filter: blur(4px); */
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 10px rgb(39, 24, 126);
 }
 
 div.content > h3 {
@@ -269,7 +271,7 @@ div.bottom-card {
   position: absolute;
   display: flex;
   bottom: 0;
-  height: 90px;
+  height: 27%;
   background: #F7F9F7;
   border-radius: 0px 0px 40px 40px;
   align-items: center;
@@ -280,7 +282,7 @@ div.bottom-card > h3 {
   padding-bottom: 30px;
   font-size: 35px;
   margin: 0;
-  left: 20px;
+  left: 1.65vw;
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-blue);
 }
@@ -299,7 +301,7 @@ div.top-card {
   width: 100%;
   position: absolute;
   top: 0;
-  height: 246px;
+  height: 75%;
   display: flex;
   position: relative;
   justify-content: center;
@@ -329,15 +331,17 @@ div.top-card > h5{
 div.top-card > h3{
   position: absolute;
   top: 18%;
-  right: -23%;
+  right: -25px;
   margin: 0;
-  font-family: 'Dancing Script', sans-serif;
+  font-family: 'Aguafina Script', sans-serif;
   font-weight: bold;
   font-size: 110px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   line-height: 178px;
   transform: rotate(-90deg);
-  color: #F7F9F7;
+  /* color: #F7F9F7; */
+  color: var(--primary-blue);
+  opacity: 4%;
 }
 
 img#star {

@@ -14,7 +14,7 @@
     }
 
     div.content {
-        z-index: 10;
+        z-index: 3;
         position: fixed;
         bottom: 0px;
         width: 100%;
@@ -25,6 +25,11 @@
     }
 
     div.content:hover {
+        background-color: var(--secondary-blue);
+        box-shadow: 0px -10px 15px rgba(117, 139, 253, 0.5);
+    }
+
+    div.content:active {
         background-color: var(--secondary-blue);
         box-shadow: 0px -10px 15px rgba(117, 139, 253, 0.5);
     }
@@ -46,4 +51,77 @@
     }
     div.layer > #content { order: 2; }
     div.layer > #result { order: 1; }
+
+    div.wine-card {
+        max-width: 313px;
+        max-height: 336px;
+        width: 30vw;
+        height: 33.5vw;
+        margin: 2%;
+    }
+
+    /* div.result {
+        width: 100%;
+    } */
+
+    div.bottom-card {
+        width: 100%;
+    }
+
+    div.bottom-card > h3 {
+        position: absolute;
+        padding-bottom: 3.2vh;
+        /* font-size: 35px; */
+        font-size: 3.4vw;
+        margin: 0;
+        left: 1.65vw;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--primary-blue);
+    }
+
+    div.bottom-card > h5 {
+        position: absolute;
+        padding-top: 30px;
+        font-size: 20px;
+        margin: 0;
+        left: 20px;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--primary-blue);
+    }
+
+    div.top-card {
+        width: 100%;
+    }
+
+    div.top-card > img{
+        width: 45%;
+        height: auto;
+        bottom: 2vh;
+    }
+
+    div.top-card > h5{
+        position: absolute;
+
+    }
+
+    div.top-card > h3{
+        position: absolute;
+    }
+
+    img#star {
+        width: auto;
+        /* height: 3.2vh; */
+    }
+
+    img#bouteille {
+        position: absolute;
+    }
+
+    h6.note {
+        position: absolute;
+    }
+
+    h6.nombre {
+        position: absolute;
+    }
 }
