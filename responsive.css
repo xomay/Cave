@@ -113,7 +113,12 @@
     }
 
     div.top-card > h3{
-        position: absolute;
+        top: 35%;
+        right: -33%;
+        margin: 0;
+        letter-spacing: 0.2em;
+        font-size: 11vw;
+        line-height: 11vw;
     }
 
     img#star {
