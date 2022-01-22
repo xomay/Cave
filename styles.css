@@ -282,7 +282,7 @@ div.bottom-card > h3 {
   padding-bottom: 30px;
   font-size: 35px;
   margin: 0;
-  left: 1.65vw;
+  left: 18px;
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-blue);
 }
@@ -301,7 +301,7 @@ div.top-card {
   width: 100%;
   position: absolute;
   top: 0;
-  height: 75%;
+  height: 73%;
   display: flex;
   position: relative;
   justify-content: center;

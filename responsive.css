@@ -58,6 +58,9 @@
         width: 30vw;
         height: 33.5vw;
         margin: 2%;
+        margin-top: 10%;
+        /* border-radius: 12.6%; */
+        border-radius: 4vw;
     }
 
     /* div.result {
@@ -66,27 +69,26 @@
 
     div.bottom-card {
         width: 100%;
+        border-radius: 0px 0px 4vw 4vw;
     }
 
     div.bottom-card > h3 {
         position: absolute;
-        padding-bottom: 3.2vh;
+        /* padding-bottom: 3.2vh; */
+        padding: 0;
         /* font-size: 35px; */
         font-size: 3.4vw;
-        margin: 0;
+        top: 5%;
         left: 1.65vw;
-        font-family: 'Montserrat', sans-serif;
-        color: var(--primary-blue);
     }
 
     div.bottom-card > h5 {
         position: absolute;
-        padding-top: 30px;
-        font-size: 20px;
+        bottom: 20%;
+        font-size: 2.2vw;
         margin: 0;
-        left: 20px;
-        font-family: 'Montserrat', sans-serif;
-        color: var(--primary-blue);
+        left: 1.65vw;
+        padding: 0;
     }
 
     div.top-card {
@@ -96,12 +98,18 @@
     div.top-card > img{
         width: 45%;
         height: auto;
-        bottom: 2vh;
+        bottom: 10%;
     }
 
     div.top-card > h5{
         position: absolute;
-
+        bottom: 3%;
+        left: 1.65vw;
+        margin: 0;
+        padding: 0%;
+        font-size: 2vw;
+        /* line-height: 24px; */
+        letter-spacing: -0.05em; 
     }
 
     div.top-card > h3{
@@ -109,19 +117,37 @@
     }
 
     img#star {
+        position: absolute;
         width: auto;
-        /* height: 3.2vh; */
+        height: 12%;
+        left: 6.7%;
+        top: 6.7%;
     }
+
 
     img#bouteille {
         position: absolute;
+        width: auto;
+        height: 16%;
+        left: 10%;
+        top: 20%;
     }
 
     h6.note {
         position: absolute;
+        top: 8%;
+        left: 18.3%;
+        font-size: 2.2vw;
+        margin: 0;
+        padding: 0;
     }
 
     h6.nombre {
         position: absolute;
+        top: 24%;
+        left: 18.3%;
+        font-size: 2.2vw;
+        margin: 0;
+        padding: 0;
     }
 }
