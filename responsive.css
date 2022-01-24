@@ -53,10 +53,12 @@
     div.layer > #result { order: 1; }
 
     div.wine-card {
-        max-width: 313px;
-        max-height: 336px;
-        width: 30vw;
-        height: 33.5vw;
+        /* max-width: 313px;
+        max-height: 336px; */
+        /* width: 30vw;
+        height: 33.5vw; */
+        width: 40vw;
+        height: 43.5vw;
         margin: 2%;
         margin-top: 10%;
         /* border-radius: 12.6%; */
@@ -77,7 +79,7 @@
         /* padding-bottom: 3.2vh; */
         padding: 0;
         /* font-size: 35px; */
-        font-size: 3.4vw;
+        font-size: 3.7vw;
         top: 5%;
         left: 1.65vw;
     }
@@ -85,7 +87,7 @@
     div.bottom-card > h5 {
         position: absolute;
         bottom: 20%;
-        font-size: 2.2vw;
+        font-size: 2.7vw;
         margin: 0;
         left: 1.65vw;
         padding: 0;
@@ -107,7 +109,7 @@
         left: 1.65vw;
         margin: 0;
         padding: 0%;
-        font-size: 2vw;
+        font-size: 2.3vw;
         /* line-height: 24px; */
         letter-spacing: -0.05em; 
     }
@@ -117,8 +119,8 @@
         right: -33%;
         margin: 0;
         letter-spacing: 0.2em;
-        font-size: 11vw;
-        line-height: 11vw;
+        font-size: 14vw;
+        line-height: 14vw;
     }
 
     img#star {
@@ -142,7 +144,7 @@
         position: absolute;
         top: 8%;
         left: 18.3%;
-        font-size: 2.2vw;
+        font-size: 2.8vw;
         margin: 0;
         padding: 0;
     }
@@ -151,7 +153,7 @@
         position: absolute;
         top: 24%;
         left: 18.3%;
-        font-size: 2.2vw;
+        font-size: 2.8vw;
         margin: 0;
         padding: 0;
     }
