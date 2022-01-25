@@ -1,4 +1,18 @@
 @media screen and (max-width: 1000px) {
+    :root {
+    --primary: rgb(58, 58, 58);
+    --secondary: #808080;
+    --tertiary: rgb(211, 211, 211);
+    
+    --colortest: rgb(0, 128, 0);
+
+    --primary-blue: rgba(39, 24, 126, 1);
+    --secondary-blue: rgba(117, 139, 253, 1);
+    --tertiary-blue: rgba(174, 184, 254, 1);
+    --theme-orange: rgba(255, 134, 0, 1);
+    --theme-white: rgb(241, 242, 246);
+    }
+
     nav{
         /* visibility: hidden;
         height: 1px; */
@@ -63,6 +77,16 @@
     div.content:active {
         background-color: var(--secondary-blue);
         box-shadow: 0px -10px 15px rgba(117, 139, 253, 0.5);
+    }
+
+    div.straight {
+        visibility: visible;
+        width: 25%;
+        height: 5px;
+        border-radius: 20px;
+        background-color: var(--theme-white);
+        z-index: 4;
+        margin-top: 5px;
     }
 
     button.next {
