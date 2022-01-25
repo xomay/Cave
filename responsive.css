@@ -22,18 +22,18 @@
         position: relative;
         justify-content: left;
         background-color: rgba(229, 213, 205, 0);
-        height: 8vw;
+        height: 11vw;
     }
 
     div.plus {
         z-index: 3;
-        width: 8vw;
-        height: 8vw;
+        width: 9vw;
+        height: 9vw;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 1.5%;
+        margin: 2%;
         transition: all 0.3s ease;
         border-radius: 20px;
         opacity: 90%;
