@@ -1,4 +1,4 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     :root {
     --primary: rgb(58, 58, 58);
     --secondary: #808080;
@@ -21,6 +21,45 @@
         width: 100%;
         position: relative;
         justify-content: left;
+        background-color: rgba(229, 213, 205, 0);
+        height: 8vw;
+    }
+
+    div.plus {
+        z-index: 3;
+        width: 8vw;
+        height: 8vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5%;
+        transition: all 0.3s ease;
+        border-radius: 20px;
+        opacity: 90%;
+    }
+    
+    div.plus:hover {
+        background-color: var(--primary-blue);
+    }
+
+    div.barre {
+        background-color: var(--theme-white);
+        border-radius: 20px;
+    }
+
+    div.vertical {
+        z-index: 1;
+        width: 12%;
+        height: 80%;
+        position: absolute;
+    }
+
+    div.horizontal {
+        z-index: 2;
+        width: 80%;
+        height: 12%;
+        position: absolute;
     }
 
     span.fi-rr-plus {
@@ -31,6 +70,7 @@
     ul.TopNavbar {
         visibility: hidden;
         height: 1px;
+        width: 1px;
     }
 
     li.navbar {

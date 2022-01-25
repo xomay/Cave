@@ -43,6 +43,14 @@ body{
 
 nav {
   background-color: rgba(229, 213, 205, 0.90);
+  width: 100%;
+  /* background-color: var(--color); */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
 }
 
 div.toTop {
@@ -112,16 +120,6 @@ ul.TopNavbar {
   visibility: visible;
 }
 
-nav {
-  width: 100%;
-  /* background-color: var(--color); */
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-}
 
 .bloc{
   height: 500px;
@@ -346,7 +344,7 @@ div.top-card > h5{
 div.top-card > h3{
   position: absolute;
   top: 18%;
-  right: -25px;
+  right: -75px;
   margin: 0;
   font-family: 'Aguafina Script', sans-serif;
   font-weight: bold;
