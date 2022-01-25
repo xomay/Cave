@@ -1,7 +1,17 @@
 @media screen and (max-width: 1000px) {
     nav{
-        visibility: hidden;
-        height: 1px;
+        /* visibility: hidden;
+        height: 1px; */
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        position: relative;
+        justify-content: left;
+    }
+
+    span.fi-rr-plus {
+        width: 30px;
+        height: auto;
     }
 
     ul.TopNavbar {
@@ -11,6 +21,27 @@
 
     li.navbar {
         visibility: hidden;
+    }
+
+    div.title-content {
+        visibility: visible;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: left;
+        margin-top: 8%;
+        margin-bottom: 5%;
+    }
+
+    div.title-content > h3 {
+        font-size: 12vw;
+        margin: 0;
+        font-family: 'Dancing Script', sans-serif;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        color: var(--theme-white);
+        margin-left: 5%;
     }
 
     div.content {
@@ -48,9 +79,20 @@
         align-items: center;
         /* Optional, if you want the DIVs 100% width: */ 
         flex-direction: column;
+        margin-top: 0;
+        position: relative;
+        top: 0;
     }
-    div.layer > #content { order: 2; }
-    div.layer > #result { order: 1; }
+    div.layer > #content { order: 3; }
+    div.layer > #result { order: 2; }
+    div.layer > #title { order: 1; }
+
+
+    div.result {
+        margin: 0;
+        padding-bottom: 10vh;
+        padding-top: 2vh;
+    }
 
     div.wine-card {
         /* max-width: 313px;
@@ -79,7 +121,7 @@
         /* padding-bottom: 3.2vh; */
         padding: 0;
         /* font-size: 35px; */
-        font-size: 3.7vw;
+        font-size: 4vw;
         top: 5%;
         left: 1.65vw;
     }
