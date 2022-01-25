@@ -82,7 +82,7 @@
     div.straight {
         visibility: visible;
         width: 25%;
-        height: 5px;
+        height: 4px;
         border-radius: 20px;
         background-color: var(--theme-white);
         z-index: 4;
@@ -116,6 +116,7 @@
         margin: 0;
         padding-bottom: 10vh;
         padding-top: 2vh;
+        column-gap: 5px;
     }
 
     div.wine-card {

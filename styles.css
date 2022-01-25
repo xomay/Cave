@@ -267,6 +267,7 @@ div.result {
   margin: 0;
   align-items: center;
   justify-content: center;
+  column-gap: 0;
 }
 
 div.wine-card {
