@@ -167,7 +167,7 @@
         width: 40vw;
         height: 43.5vw;
         margin: 2%;
-        margin-top: 10%;
+        margin-top: 17%;
         /* border-radius: 12.6%; */
         border-radius: 4vw;
     }
@@ -181,15 +181,46 @@
         border-radius: 0px 0px 4vw 4vw;
     }
 
+    div.appellation {
+        width: 90%;
+        position: absolute;
+        left: 1.65vw;
+        height: 50%;
+        top: 0;
+    }
+    
+    div.appellation > h3 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        /* font-size: 3.5vw; */
+        font-size: 2.5vh;
+    }
+
+    div.cepage {
+        position: absolute;
+        bottom: 0;
+        left: 1.65vw;
+        height: 50%;
+        width: 90%;
+    }
+
+    div.cepage > h5 {
+        font-size: 2.7vw;
+        margin: 0;
+    }
+
     div.bottom-card > h3 {
         position: absolute;
-        /* padding-bottom: 3.2vh; */
+        padding-bottom: 3.2vh;
         padding: 0;
-        /* font-size: 35px; */
-        font-size: 4vw;
+        font-size: 35px;
         top: 5%;
         left: 1.65vw;
+        font-size: 4vw;
     }
+
 
     div.bottom-card > h5 {
         position: absolute;

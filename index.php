@@ -43,74 +43,11 @@ require_once 'fonctions.php';
                 <h3>Critères</h3>
                 <button class="next">1/3 -></button>
                 <div class="choice" id="choice">
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
+                    <!-- <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meatWhite.png" alt="viande">
                         <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
-                    <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
-                        <img src="img/meatWhite.png" alt="viande">
-                        <h3>Viandes Rouges</h3>
-                    </button>
+                    </button> -->
+                    <?= critere_button(); ?>
                 </div>
             </div>
                 
@@ -123,11 +60,15 @@ require_once 'fonctions.php';
                         <h6 class="note">5</h6>
                         <h6 class="nombre">3</h6>
                         <h5>Chateau Segur</h5>
-                        <h3>1994</h3>
+                        <h3>2000</h3>
                     </div>
                     <div class="bottom-card">
-                        <h3>Haut Medoc</h3>
-                        <h5>Pinot Gris</h5>
+                        <div class="appellation">
+                            <h3>Haut-Medoc Cru bourgeois</h3>
+                        </div>
+                        <div class="cepage">
+                            <h5>Pinot Gris</h5>
+                        </div>
                     </div>
                 </div>
 
