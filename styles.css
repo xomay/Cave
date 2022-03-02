@@ -34,6 +34,10 @@ body{
   overflow-x: hidden;
 }
 
+.red {
+  background-color: red!important;
+}
+
 
 .navbar:hover{
   background-color: var(--theme-orange);
@@ -159,6 +163,9 @@ div.content > h3 {
   color: var(--theme-white);
   position: absolute;
   font-size: 1.5em;
+  position: absolute;
+  /* top: 1vw; */
+  left: 1.5vw;
 }
 
 div.layer {
@@ -193,11 +200,43 @@ button.next {
   background-color: var(--secondary-blue);
   color: var(--theme-white);
   box-shadow: 1px 5px 15px rgba(117, 139, 253, 0.5);
+  list-style-type: none;
+}
+
+ul.next {
+  list-style-type: none;
+  width: 347px;
+  height: 49px;
+  display: flex;
+  border-radius: 25px;
+  background-color: var(--primary-blue);
+  flex-direction: row;
+  justify-content: center;
+  padding: 0%;
+  align-items: center;
+  visibility: visible;
+  position: absolute;
+}
+
+li.nav_criteres {
+  transition: all 0.5s ease;
+  text-decoration: none;
+  /* padding: 0.2em 0.5em; */
+  padding: 13px;
+  border-radius: 25px;
+}
+
+li.nav_criteres > a{
+  text-decoration: none;
+  color: var(--theme-white);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
 }
 
 
 
-button.next:hover {
+li.nav_criteres:hover {
   background-color: var(--theme-orange);
   box-shadow: 1px 5px 15px rgba(255, 134, 0, 0.5);
 }
@@ -293,11 +332,17 @@ div.bottom-card {
 div.bottom-card > h3 {
   position: absolute;
   padding-bottom: 30px;
-  font-size: 35px;
+  font-size: 30px;
   margin: 0;
   left: 18px;
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-blue);
+}
+
+.long_appellation {
+  font-size: 25px!important;
+  line-height: 25px;
+  /* background-color: red!important; */
 }
 
 div.bottom-card > h5 {
@@ -308,6 +353,10 @@ div.bottom-card > h5 {
   left: 20px;
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-blue);
+}
+
+.appellation_resp {
+  padding-top: 40px!important;
 }
 
 div.top-card {

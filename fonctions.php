@@ -1,5 +1,7 @@
 <?php 
 
+    $test = "Hello World";
+
     // $pdo = new PDO('sqlite:Db/cave.db');
 
     // $statement = $pdo->query("SELECT * FROM bouteille");
@@ -14,6 +16,7 @@
     // echo '</pre>';
 
     function wine_card () {
+
         $pdo = new PDO('sqlite:../Db/new_cave.db');
 
         $statement = $pdo->query("SELECT * FROM BOUTEILLES");
@@ -22,11 +25,13 @@
         }
 
         $rows = $statement->fetchAll();
+        $max = count($rows); 
 
-        // echo '<pre>';
-        // print_r($rows[1]);
-        // echo '</pre>';
-        for ($i = 1; $i < 30; $i++){
+
+        for ($i = 1; $i < ($max+1); $i++){
+            $class_h3 = "";
+            $class_h5 = "";
+            $len = 0;
 
             $statement = $pdo->query("SELECT DOMAINES.nom
                                 FROM BOUTEILLES, DOMAINES
@@ -112,8 +117,8 @@
                     <h3>$millesime</h3>
                 </div>
                 <div class="bottom-card">
-                    <h3>$appellation</h3>
-                    <h5>$cepage</h5>
+                    <h3 class="appellation">$appellation</h3>
+                    <h5 class="cepage">$cepage</h5>
                 </div>
             </div>
 HTML;
@@ -142,7 +147,7 @@ HTML;
         }
     }
 
-    function critere_button() {
+    function critere_mets() {
         $pdo = new PDO('sqlite:../Db/new_cave.db');
 
         $statement = $pdo->query("SELECT nom FROM METS");
@@ -156,7 +161,30 @@ HTML;
             $critere = $name[0];
             if ($critere != "Indefini") {
                 echo <<<HTML
-                <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
+                <button class="choice-button mets" :class="{check : valid, uncheck : !valid}" @click="check">
+                    <img src="img/meatWhite.png" alt="viande">
+                    <h3>$critere</h3>
+                </button>
+HTML;
+            }
+        }
+    }
+
+    function critere_regions() {
+        $pdo = new PDO('sqlite:../Db/new_cave.db');
+
+        $statement = $pdo->query("SELECT nom FROM METS");
+        if ($statement === FALSE){
+            die('Erreur SQL');
+        }
+
+        $results = $statement->fetchAll();
+
+        foreach ($results as $name) {
+            $critere = $name[0];
+            if ($critere != "Indefini") {
+                echo <<<HTML
+                <button class="choice-button regions" :class="{check : valid, uncheck : !valid}" @click="check">
                     <img src="img/meatWhite.png" alt="viande">
                     <h3>$critere</h3>
                 </button>
