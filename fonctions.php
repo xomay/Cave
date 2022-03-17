@@ -1,7 +1,5 @@
 <?php 
 
-    $test = "Hello World";
-
     // $pdo = new PDO('sqlite:Db/cave.db');
 
     // $statement = $pdo->query("SELECT * FROM bouteille");
@@ -17,7 +15,18 @@
 
     function wine_card () {
 
-        $pdo = new PDO('sqlite:../Db/new_cave.db');
+        $pdo = new PDO('sqlite:Db/new_cave.db');
+        // $pdo = new PDO('mysql:host=185.27.134.10;
+        //                 dbname=epiz_31212063_db_cave;,
+        //                 'epiz_31212063','mAthys2004');
+
+        // $conn = mysqli_connect("sql108.epizy.com", "epiz_31212063", "7GVAaOXxtm", "epiz_31212063_db_cave");
+        
+        // if (!$conn) {
+        //     die("Connection Failed:".mysqli_connect_error());
+        // }else{
+        //     echo ("Done !");
+        // }
 
         $statement = $pdo->query("SELECT * FROM BOUTEILLES");
         if ($statement === FALSE){
@@ -51,7 +60,7 @@
             if ($statement === FALSE){
                 die('Erreur SQL');
             }
-
+  
             $result = $statement->fetchAll();
             $cepage = $result[0][0];
 
@@ -127,7 +136,7 @@ HTML;
     }
 
     function test() {
-        $pdo = new PDO('sqlite:../Db/cave.db');
+        $pdo = new PDO('sqlite:Db/cave.db');
 
         for ($i = 1; $i < 20; $i++){
 
@@ -148,7 +157,7 @@ HTML;
     }
 
     function critere_mets() {
-        $pdo = new PDO('sqlite:../Db/new_cave.db');
+        $pdo = new PDO('sqlite:Db/new_cave.db');
 
         $statement = $pdo->query("SELECT nom FROM METS");
         if ($statement === FALSE){
@@ -161,7 +170,7 @@ HTML;
             $critere = $name[0];
             if ($critere != "Indefini") {
                 echo <<<HTML
-                <button class="choice-button mets" :class="{check : valid, uncheck : !valid}" @click="check">
+                <button class="choice-button active" id="mets">
                     <img src="img/meatWhite.png" alt="viande">
                     <h3>$critere</h3>
                 </button>
@@ -171,9 +180,9 @@ HTML;
     }
 
     function critere_regions() {
-        $pdo = new PDO('sqlite:../Db/new_cave.db');
+        $pdo = new PDO('sqlite:Db/new_cave.db');
 
-        $statement = $pdo->query("SELECT nom FROM METS");
+        $statement = $pdo->query("SELECT nom FROM REGIONS");
         if ($statement === FALSE){
             die('Erreur SQL');
         }
@@ -184,7 +193,53 @@ HTML;
             $critere = $name[0];
             if ($critere != "Indefini") {
                 echo <<<HTML
-                <button class="choice-button regions" :class="{check : valid, uncheck : !valid}" @click="check">
+                <button class="choice-button " id="region">
+                    <img src="img/meatWhite.png" alt="viande">
+                    <h3>$critere</h3>
+                </button>
+HTML;
+            }
+        }
+    }
+
+//     function critere_millesime() {
+//         $pdo = new PDO('sqlite:../Db/new_cave.db');
+
+//         $statement = $pdo->query("SELECT nom FROM REGIONS");
+//         if ($statement === FALSE){
+//             die('Erreur SQL');
+//         }
+
+//         $results = $statement->fetchAll();
+
+//         foreach ($results as $name) {
+//             $critere = $name[0];
+//             if ($critere != "Indefini") {
+//                 echo <<<HTML
+//                 <button class="choice-button regions" :class="{check : valid, uncheck : !valid}" @click="check">
+//                     <img src="img/meatWhite.png" alt="viande">
+//                     <h3>$critere</h3>
+//                 </button>
+// HTML;
+//             }
+//         }
+//     }
+
+    function critere_cepages() {
+        $pdo = new PDO('sqlite:Db/new_cave.db');
+
+        $statement = $pdo->query("SELECT nom FROM CEPAGES");
+        if ($statement === FALSE){
+            die('Erreur SQL');
+        }
+
+        $results = $statement->fetchAll();
+
+        foreach ($results as $name) {
+            $critere = $name[0];
+            if ($critere != "Assemblage(Indefini)") {
+                echo <<<HTML
+                <button class="choice-button " id="cepage">
                     <img src="img/meatWhite.png" alt="viande">
                     <h3>$critere</h3>
                 </button>

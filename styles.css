@@ -38,6 +38,9 @@ body{
   background-color: red!important;
 }
 
+form[name="criteres_form"] {
+  display: none;
+}
 
 .navbar:hover{
   background-color: var(--theme-orange);
@@ -248,7 +251,7 @@ li.nav_criteres:hover {
 div.choice {
   display: flex;
   position: absolute;
-  top: 10%;
+  top: 14%;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -256,7 +259,6 @@ div.choice {
   width: auto;
   height: 80%;
   overflow-y: scroll;
-
 }
 
 button.choice-button {
@@ -266,6 +268,22 @@ button.choice-button {
   border: none;
   transition: all 0.5s ease;
   margin: 1.5%;
+  display: none;
+  align-items: center;
+}
+
+.choice-button.active {
+  background-color: var(--secondary-blue);
+  display: block;
+}
+
+.nav_criteres.active {
+  background-color: var(--theme-orange);
+}
+
+.select {
+  box-shadow: 1px 5px 15px rgba(255, 134, 0, 0.7);
+  background-color: var(--theme-orange)!important;
 }
 
 button.check {
@@ -278,7 +296,7 @@ button.uncheck {
 
 button.choice-button > img {
   width: auto;
-  height: 35%;
+  height: 50%;
 }
 
 button.choice-button > h3 {
@@ -307,8 +325,23 @@ div.result {
   column-gap: 0;
 }
 
+.active-card {
+  display: flex!important;
+}
+
 div.wine-card {
   background-color: var(--theme-white);
+  width: 313px;
+  height: 336px;
+  border-radius: 40px;
+  display: none;
+  position: relative;
+  justify-content: center;
+  margin: 50px;
+}
+
+div.wine-card_big {
+  background-color: var(--theme-orange);
   width: 313px;
   height: 336px;
   border-radius: 40px;
