@@ -3,7 +3,7 @@ require 'header.php';
 require_once 'fonctions.php';
 ?>
 <body>
-
+    <!-- scroll="no" style="overflow: hidden" -->
     <form id="form" name="criteres_form" method="post" onSubmit="test();return false">
         <?php $pdo = new PDO('sqlite:Db/new_cave.db');
 
@@ -79,7 +79,7 @@ require_once 'fonctions.php';
         
     </nav>
 
-    <main>
+    <main class="">
         
         <div class="layer">
             <div class="title-content" id="title">
@@ -220,19 +220,51 @@ require_once 'fonctions.php';
                     </div>
                 </div> -->
 
-                <div class="wine-card ">
+                <div class="wine-card">
                     <div class="top-card">
-                        <img src="img/bouteille-rouge.png" alt="bouteille-vin">
-                        <img id="star" src="img/star-orange.png" alt="etoile">
-                        <img id="bouteille" src="img/bouteille2.png" alt="img-bouteille">
+                        <img class="main-bouteille" src="img/bouteille-rouge.png" alt="bouteille-vin">
+                        <img class="star" src="img/star-orange.png" alt="etoile">
+                        <img class="bouteille" src="img/bouteille2.png" alt="img-bouteille">
                         <h6 class="note">5<h6>
                         <h6 class="nombre">1</h6>
-                        <h5>Chateau Segur</h5>
+                        <h5 class="domaine">Chateau Segur</h5>
                         <h3 class="millesime">2004</h3>
+                        <div class="millesime_choice hide">
+                            <ul class="diff_annees">
+                                <li class="mill">2000</li>
+                                <li class="mill">2004</li>
+                                <li class="mill">2005</li>
+                            </ul>
+                        </div>
+                        <h3 class="appellation-big hide">Haut Medoc</h3>
+                        <h5 class="cepage-big hide">Assemblage</h5>
+                        <div class="infos hide">
+                            <div class="info">
+                                <img src="img/regions/Bordeaux.png" alt="viande">
+                                <h3>Bordeaux</h3>
+                            </div>
+                            <div class="info">
+                                <img src="img/cepages/Assemblage.png" alt="viande">
+                                <h3>Assemblage</h3>
+                            </div>
+                            <div class="info">
+                                <img src="img/mets/Viande rouge.png" alt="viande">
+                                <h3>Viandes Rouge</h3>
+                            </div>
+                        </div>
                     </div>
                     <div class="bottom-card">
                         <h3 class="appellation">Haut Medoc</h3>
                         <h5 class="cepage">Assemblage</h5>
+                        <div class="take-button hide">
+                            <button class="main-button">
+                                <h1>Prendre maintenant</h1>
+                            </button>
+                            <button class="second-button">
+                                <h1>Ajouter à la liste</h1>
+                            </button>
+                            <input class="nb-input" type="text" placeholder="0">
+                        </div>
                     </div>
                 </div>
 
@@ -406,12 +438,12 @@ require_once 'fonctions.php';
                 ?>
                 <div class="wine-card <?php echo $region;?> <?php echo $cepage; ?> <?php foreach($mets as $el){ echo $el;}?>">
                     <div class="top-card">
-                        <img src="<?php echo $img; ?>" alt="bouteille-vin">
-                        <img id="star" src="img/star-orange.png" alt="etoile">
-                        <img id="bouteille" src="img/bouteille2.png" alt="img-bouteille">
+                        <img class="main-bouteille" src="<?php echo $img; ?>" alt="bouteille-vin">
+                        <img class="star" src="img/star-orange.png" alt="etoile">
+                        <img class="bouteille" src="img/bouteille2.png" alt="img-bouteille">
                         <h6 class="note"><?php echo $note; ?><h6>
                         <h6 class="nombre"><?php echo $nombre; ?></h6>
-                        <h5><?php echo $domaine; ?></h5>
+                        <h5 class="domaine"><?php echo $domaine; ?></h5>
                         <h3 class="millesime"><?php echo $millesime; ?></h3>
                     </div>
                     <div class="bottom-card">

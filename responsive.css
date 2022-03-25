@@ -1,4 +1,4 @@
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 925px) {
     :root {
     --primary: rgb(58, 58, 58);
     --secondary: #808080;
@@ -211,7 +211,7 @@
         margin: 0;
     }
 
-    div.bottom-card > h3 {
+    h3.appellation {
         position: absolute;
         padding-bottom: 3.2vh;
         padding: 0;
@@ -222,7 +222,7 @@
     }
 
 
-    div.bottom-card > h5 {
+    h5.cepage {
         position: absolute;
         bottom: 20%;
         font-size: 2.7vw;
@@ -235,13 +235,13 @@
         width: 100%;
     }
 
-    div.top-card > img{
+    img.main-bouteille {
         width: 45%;
         height: auto;
         bottom: 10%;
     }
 
-    div.top-card > h5{
+    h5.domaine {
         position: absolute;
         bottom: 3%;
         left: 1.65vw;
@@ -252,7 +252,7 @@
         letter-spacing: -0.05em; 
     }
 
-    div.top-card > h3{
+    h3.millesime {
         top: 35%;
         right: -33%;
         margin: 0;
@@ -261,7 +261,7 @@
         line-height: 14vw;
     }
 
-    img#star {
+    img.star {
         position: absolute;
         width: auto;
         height: 12%;
@@ -270,7 +270,7 @@
     }
 
 
-    img#bouteille {
+    img.bouteille {
         position: absolute;
         width: auto;
         height: 16%;
