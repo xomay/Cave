@@ -225,12 +225,30 @@ require_once 'fonctions.php';
                         <img class="main-bouteille" src="img/bouteille-rouge.png" alt="bouteille-vin">
                         <img class="star" src="img/star-orange.png" alt="etoile">
                         <img class="bouteille" src="img/bouteille2.png" alt="img-bouteille">
-                        <h6 class="note">5<h6>
-                        <h6 class="nombre">1</h6>
+                        <div class="all_millesime">
+                            <div class="2000">
+                                <h6 class="note">5<h6>
+                                <h6 class="nombre">1</h6>
+                            </div>
+                            <div class="2004">
+                                <h6 class="note">4<h6>
+                                <h6 class="nombre">1</h6>
+                            </div>
+                            <div class="2005">
+                                <h6 class="note">3<h6>
+                                <h6 class="nombre">1</h6>
+                            </div>
+                        </div>
                         <h5 class="domaine">Chateau Segur</h5>
                         <h3 class="millesime">2004</h3>
                         <div class="millesime_choice hide">
-                            <ul class="diff_annees">
+                            <!-- <button class="dropbtn mill">Select année</button>
+                            <div class="drop-content">
+                                <h3>2000</h3>
+                                <h3>2004</h3>
+                                <h3>2005</h3>
+                            </div> -->
+                            <ul class="diff_annees"> 
                                 <li class="mill">2000</li>
                                 <li class="mill">2004</li>
                                 <li class="mill">2005</li>
@@ -259,9 +277,6 @@ require_once 'fonctions.php';
                         <div class="take-button hide">
                             <button class="main-button">
                                 <h1>Prendre maintenant</h1>
-                            </button>
-                            <button class="second-button">
-                                <h1>Ajouter à la liste</h1>
                             </button>
                             <input class="nb-input" type="text" placeholder="0">
                         </div>

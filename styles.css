@@ -117,6 +117,10 @@ div.toTop {
   border-radius: 25px;
 }
 
+.navbar:hover {
+  cursor: pointer;
+}
+
 .navbar > a{
   text-decoration: none;
   color: var(--theme-white);
@@ -254,6 +258,7 @@ li.nav_criteres > a{
 li.nav_criteres:hover {
   background-color: var(--theme-orange);
   box-shadow: 1px 5px 15px rgba(255, 134, 0, 0.5);
+  cursor: pointer;
 }
 
 .choice::-webkit-scrollbar {
@@ -318,6 +323,7 @@ button.choice-button > h3 {
 button.choice-button:hover {
   box-shadow: 1px 5px 15px rgba(117, 139, 253, 0.7);
   background-color: var(--tertiary-blue);
+  cursor: pointer;
 }
 
 button.choice-button:active {
@@ -352,6 +358,10 @@ div.wine-card {
   margin: 50px;
   transition: all 0.5s ease;
   /* backdrop-filter: none; */
+}
+
+div.wine-card:hover {
+  cursor: pointer;
 }
 
 div.wine-card_big {
@@ -610,7 +620,7 @@ div.infos {
   /* justify-content: center; */
   flex-wrap: wrap;
   max-width: 90%;
-  width: 35%;
+  width: 340px;
   height: 220px;
   z-index: 3;
 }
@@ -707,7 +717,7 @@ div.take-button{
 }
 
 button.main-button {
-  width: 225px;
+  width: 250px;
   height: 125px;
   border-radius: 15px;
   border: none;
@@ -726,32 +736,6 @@ button.main-button:hover {
 }
 
 button.main-button > h1 {
-  font-size: 15px;
-  color: var(--theme-white);
-  font-family: 'Montserrat';
-  font-style: bold;
-}
-
-button.second-button {
-  width: 225px;
-  height: 125px;
-  border-radius: 15px;
-  border: none;
-  transition: all 0.5s ease;
-  margin: 0;
-  align-items: center;
-  position: absolute;
-  left: 30px;
-  background-color: var(--primary-blue);
-  opacity: 95%;
-}
-
-button.second-button:hover {
-  box-shadow: 1px 5px 15px rgba(117, 139, 253, 0.7);
-  background-color: var(--secondary-blue);
-}
-
-button.second-button > h1 {
   font-size: 15px;
   color: var(--theme-white);
   font-family: 'Montserrat';
