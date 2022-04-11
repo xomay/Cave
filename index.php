@@ -225,37 +225,42 @@ require_once 'fonctions.php';
                         <img class="main-bouteille" src="img/bouteille-rouge.png" alt="bouteille-vin">
                         <img class="star" src="img/star-orange.png" alt="etoile">
                         <img class="bouteille" src="img/bouteille2.png" alt="img-bouteille">
-                        <div class="all_millesime">
-                            <div class="2000">
-                                <h6 class="note">5<h6>
-                                <h6 class="nombre">1</h6>
+                        <h6 class="note">5<h6>
+                        <h6 class="nombre">1</h6>
+                        <div class="all_millesime hide">
+                            <div id="2000" class="infos_mill info-active">
+                                <h6 class="note_big">5<h6>
+                                <h6 class="nombre_big">1</h6>
                             </div>
-                            <div class="2004">
-                                <h6 class="note">4<h6>
-                                <h6 class="nombre">1</h6>
+                            <div id="2004" class="infos_mill">
+                                <h6 class="note_big">4<h6>
+                                <h6 class="nombre_big">1</h6>
                             </div>
-                            <div class="2005">
-                                <h6 class="note">3<h6>
-                                <h6 class="nombre">1</h6>
+                            <div id="2005" class="infos_mill">
+                                <h6 class="note_big">3<h6>
+                                <h6 class="nombre_big">1</h6>
                             </div>
                         </div>
                         <h5 class="domaine">Chateau Segur</h5>
                         <h3 class="millesime">2004</h3>
                         <div class="millesime_choice hide">
-                            <!-- <button class="dropbtn mill">Select année</button>
-                            <div class="drop-content">
-                                <h3>2000</h3>
-                                <h3>2004</h3>
-                                <h3>2005</h3>
-                            </div> -->
-                            <ul class="diff_annees"> 
+                            <button id="btn" class="dropbtn">Select année</button>
+                            <div class="drop-content drop-hide">
+                                <!-- <h3 class="mill">2000</h3>
+                                <h3 class="mill">2004</h3>
+                                <h3 class="mill">2005</h3> -->
+                                <ul class="ulmill">
+                                    <li class="mill active-mill"><a href="#2000">2000</a></li>
+                                    <li class="mill"><a href="#2004">2004</a></li>
+                                    <li class="mill"><a href="#2005">2005</a></li>
+                                </ul>
+                            </div>
+                            <!-- <ul class="diff_annees"> 
                                 <li class="mill">2000</li>
                                 <li class="mill">2004</li>
                                 <li class="mill">2005</li>
-                            </ul>
+                            </ul> -->
                         </div>
-                        <h3 class="appellation-big hide">Haut Medoc</h3>
-                        <h5 class="cepage-big hide">Assemblage</h5>
                         <div class="infos hide">
                             <div class="info">
                                 <img src="img/regions/Bordeaux.png" alt="viande">
@@ -272,6 +277,7 @@ require_once 'fonctions.php';
                         </div>
                     </div>
                     <div class="bottom-card">
+                        <h5 class="domaine_bottom hide">Chateau Segur</h5>
                         <h3 class="appellation">Haut Medoc</h3>
                         <h5 class="cepage">Assemblage</h5>
                         <div class="take-button hide">
