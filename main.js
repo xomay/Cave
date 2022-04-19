@@ -295,12 +295,18 @@
             note.classList.remove('hide')
             var nombre = current.querySelector('.nombre')
             nombre.classList.remove('hide')
+            var all_millesime = current.querySelector('.all_millesime')
+            all_millesime.classList.add('hide')
             var domaine = current.querySelector('.domaine')
             domaine.classList.remove('hide')
             var millesime = current.querySelector('.millesime')
             millesime.classList.remove('hide')
+            var vol_content = current.querySelector('.vol-content')
+            vol_content.classList.add('hide')
             var choice_millesime = current.querySelector('.millesime_choice')
             choice_millesime.classList.add('hide')
+            var btn = current.querySelector('.dropbtn')
+            btn.classList.remove('current')
             var infos = current.querySelector('.infos')
             infos.classList.add('hide')
             var bottom = current.querySelector('.bottom-card_big')
@@ -335,6 +341,48 @@
             if (verif == false){
                 
                 e.stopPropagation()
+
+                console.log(this)
+                var year = this.querySelector('.active-mill').firstChild.getAttribute('href').substr(1)
+                // var vol = this.querySelector('.vol.active-vol').firstChild.getAttribute('href').substr(1)
+                var new_mill = this.querySelectorAll(`[id='${year}']`)
+                for (var i = 0; i < new_mill.length; i++) {
+                    if (new_mill[i].classList.contains('25cl')) {
+                        this.querySelector('.little').classList.add('show-vol')
+                    }
+                    if (new_mill[i].classList.contains('75cl')) {
+                        this.querySelector('.medium').classList.add('show-vol')
+                    }
+                    if (new_mill[i].classList.contains('150cl')) {
+                        this.querySelector('.large').classList.add('show-vol')
+                    }
+                }
+                var put_active = this.querySelectorAll('.show-vol')
+                put_active[0].classList.add('active-vol')
+                var vol = put_active[0].firstChild.getAttribute('href').substr(1)
+                for (var i = 0; i < new_mill.length; i++) {
+                    if (new_mill[i].classList.contains(vol)) {
+                        new_mill[i].classList.add('info-active')
+                    }
+                }
+                
+                // vol_dispo = []
+                // var put_active = this.querySelectorAll('.show-vol')
+                // put_active[0].classList.add('active-vol')
+                // var vol = put_active[0].firstChild.getAttribute('href').substr(1)
+                // var new_vol = this.querySelectorAll(`[id='${year}']`)
+                // console.log('current : ', new_vol)
+                // for (var i = 0; i < new_vol.length; i++) {
+                //     if (new_vol[i].classList.contains('info-active')) {
+                //         new_vol[i].classList.remove('info-active')
+                //     }
+                // }
+                // for (var i = 0; i < new_vol.length; i++) {
+                //     if (new_vol[i].classList.contains(vol)) {
+                //         new_vol[i].classList.add('info-active')
+                //     }
+                // }
+
                 this.classList.add('wine-card_big')
                 this.classList.remove('wine-card')
                 var top = this.querySelector('.top-card')
@@ -359,8 +407,12 @@
                 domaine_top.classList.add('hide')
                 var millesime = this.querySelector('.millesime')
                 millesime.classList.add('hide')
+                var vol_content = this.querySelector('.vol-content')
+                vol_content.classList.remove('hide')
                 var choice_millesime = this.querySelector('.millesime_choice')
                 choice_millesime.classList.remove('hide')
+                var btn = this.querySelector('.dropbtn')
+                btn.classList.add('current')
                 var infos = this.querySelector('.infos')
                 infos.classList.remove('hide')
                 var bottom = this.querySelector('.bottom-card')
@@ -446,31 +498,34 @@
         }
     }
 
-    var btn = document.getElementById('btn')
-    console.log(btn)
-    btn.addEventListener('click', function(e){
-        e.preventDefault
-        console.log('this ; ',this)
-        var content = this.parentNode.querySelector('.drop-content')
-        console.log('content ; ', content)
-        content.classList.toggle('drop-hide')
-        console.log('done')
-    })
-
-    var test2 = 2000
-    console.log('test :', document.querySelectorAll(`[id='${test2}']`))
+    var btn = document.querySelectorAll('#btn')
+    for (var i=0; i < btn.length; i ++){
+        btn[i].addEventListener('click', function(e){
+            console.log('over there : ',btn[i])
+            e.preventDefault
+            console.log('this ; ',this)
+            var card = this.parentNode.parentNode
+            card.querySelector('.vol-content').classList.toggle('hide')
+            var content = this.parentNode.querySelector('.drop-content')
+            console.log('content ; ', content)
+            content.classList.toggle('drop-hide')
+            console.log('done')
+        })
+    }
 
     var millbtn = document.querySelectorAll('.mill a')
     console.log('btn : ',millbtn)
+    var vol_dispo = []
     for (var i = 0; i < millbtn.length; i++) {
         millbtn[i].addEventListener('click', function (e) {
             e.preventDefault()
             console.log('mill click')
             var li = this.parentNode
             var div = this.parentNode.parentNode.parentNode
+            var card = div.parentNode.parentNode
     
             if (li.classList.contains('active-mill')) {
-                console.log('False return')
+                console.log('False')
                 return false
             }
     
@@ -483,12 +538,117 @@
                 mill_delete[i].classList.remove('info-active')
             }
             // div.querySelectorAll(this.getAttribute('href')).classList.add('active')
+            reset = document.querySelectorAll('.vol.show-vol')
+            for (var i = 0; i < reset.length; i++){
+                reset[i].classList.remove('show-vol')
+                if (reset[i].classList.contains('active-vol')){
+                    reset[i].classList.remove('active-vol')
+                }
+            }
             var year = this.getAttribute('href').substr(1)
             console.log(year)
-            var new_mill = document.querySelectorAll(`[id='${year}']`)
+            var new_mill = card.querySelectorAll(`[id='${year}']`)
             console.log(new_mill)
+            vol_dispo = []
             for (var i = 0; i < new_mill.length; i++) {
                 new_mill[i].classList.add('info-active')
+                if (new_mill[i].classList.contains('25cl')){
+                    vol_dispo.push('25cl')
+                    card.querySelector('.little').classList.add('show-vol')
+                }
+                if (new_mill[i].classList.contains('75cl')) {
+                    vol_dispo.push('75cl')
+                    card.querySelector('.medium').classList.add('show-vol')
+                }
+                if (new_mill[i].classList.contains('150cl')) {
+                    vol_dispo.push('150cl')
+                    card.querySelector('.large').classList.add('show-vol')
+                }
+            }
+            var put_active = card.querySelectorAll('.show-vol')
+            put_active[0].classList.add('active-vol')
+            var vol = put_active[0].firstChild.getAttribute('href').substr(1)
+            var new_vol = card.querySelectorAll(`[id='${year}']`)
+            console.log('current : ',new_vol)
+            for (var i = 0; i < new_vol.length; i++) {
+                if (new_vol[i].classList.contains('info-active')) {
+                    new_vol[i].classList.remove('info-active')
+                }
+            }
+            for (var i = 0; i < new_vol.length; i++) {
+                if (new_vol[i].classList.contains(vol)) {
+                    new_vol[i].classList.add('info-active')
+                }
+            }
+            console.log(vol_dispo)
+        })
+    }
+
+    var volbtn = document.querySelectorAll('.vol a')
+    console.log('btn : ', volbtn)
+    for (var i = 0; i < volbtn.length; i++) {
+        volbtn[i].addEventListener('click', function (e) {
+            e.preventDefault()
+            console.log('vol click')
+            var li = this.parentNode
+            var div = this.parentNode.parentNode.parentNode
+            var card = div.parentNode.parentNode
+
+            if (li.classList.contains('active-vol')) {
+                console.log('False')
+                return false
+            }
+
+            div.querySelector('.vol.active-vol').classList.remove('active-vol')
+            li.classList.add('active-vol')
+
+            // div.querySelector('.choice-button.active').classList.remove('active')
+            // var mill_delete = document.querySelectorAll('.infos_mill.info-active')
+            // for (var i = 0; i < mill_delete.length; i++) {
+            //     mill_delete[i].classList.remove('info-active')
+            // }
+            // div.querySelectorAll(this.getAttribute('href')).classList.add('active')
+            var year = card.querySelector('.active-mill').firstChild.getAttribute('href').substr(1)
+            var vol = this.getAttribute('href').substr(1)
+            console.log(vol)
+            var new_vol = card.querySelectorAll(`[id='${year}']`)
+            console.log(new_vol)
+            for (var i = 0; i < new_vol.length; i++) {
+                if (new_vol[i].classList.contains('info-active')) {
+                    new_vol[i].classList.remove('info-active')
+                }
+            }
+            for (var i = 0; i < new_vol.length; i++) {
+                if (new_vol[i].classList.contains(vol)) {
+                    new_vol[i].classList.add('info-active')
+                }
+            }
+        })
+    }
+
+    var take_btn = document.querySelectorAll('.main-button')
+    for (var i = 0; i < take_btn.length; i++){
+        take_btn[i].addEventListener('click', function(e){
+            e.preventDefault
+            console.log('take click')
+            var card = this.parentNode.parentNode.parentNode
+            var id = card.getAttribute('id')
+            var vol = card.querySelector('.active-vol').firstChild.getAttribute('href').substr(1)
+            var year = card.querySelector('.active-mill').firstChild.getAttribute('href').substr(1)
+            var note = card.querySelector('.info-active').querySelector('.note_big').textContent
+            var nombre = card.querySelector('.info-active').querySelector('.nombre_big').textContent
+            var demande = card.querySelector('.nb-input').value
+            if (demande > 0 && demande <= nombre){
+                console.log(id, vol, year, note, nombre, demande)
+                document.getElementById('id_bouteille').value = id
+                document.getElementById('volume').value = vol
+                document.getElementById('annee').value = year
+                document.getElementById('note').value = note
+                document.getElementById('demande').value = demande 
+                document.getElementById('form_values').submit();
+
+            }else {
+                window.alert('Demande incorrect !')
             }
         })
     }

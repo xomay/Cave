@@ -377,7 +377,7 @@ div.wine-card_big {
   justify-content: center;
   margin: 50px;
   z-index: 50;
-  transition: all 0.5s ease; 
+  transition: all 0.5s ease-out; 
   margin: 0;
   /* backdrop-filter: none!important; */
   /* voir pour une meilleure transition */
@@ -541,9 +541,9 @@ h3.millesime {
 
 div.millesime_choice {
   width: 40%;
-  height: 165px;
+  height: 365px;
   position: absolute;
-  top: 150px;
+  top: 185px;
   left: 20px;
   /* background-color: var(--color); */
   justify-content: center;
@@ -555,7 +555,7 @@ div.millesime_choice {
 button.dropbtn {
   border-radius: 15px;
   width: 150px;
-  height: 70px;
+  height: 35px;
   border: none;
   transition: all 0.3s ease;
   background-color: var(--secondary-blue);
@@ -575,11 +575,14 @@ div.drop-content {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 80px;
+  height: 100%;
   display: flex;
   /* align-items: center; */
   justify-content: center;
   flex-wrap: wrap;
+  position: absolute;
+  top: 50px;
+  z-index: 5;
 }
 
 .drop-hide {
@@ -592,10 +595,12 @@ div.drop-content {
   height: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   padding: 0;
   margin: 0;
+  background-color: var(--theme-white);
+  z-index: 5;
 }
 
 .mill {
@@ -615,6 +620,7 @@ div.drop-content {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 6;
 }
 
 .mill:hover{
@@ -628,6 +634,80 @@ div.drop-content {
 }
 
 .mill > a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--theme-white);
+  padding: 8px 20px 8px 20px;
+}
+
+
+div.vol-content {
+  margin: 0;
+  padding: 0;
+  width: 40%;
+  height: 45px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 250px;
+  left: 20px;
+  z-index: 10;
+}
+
+.vol-hide {
+  display: none !important;
+}
+
+.ulvol {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.vol {
+  transition: all 0.5s ease;
+  width: 90px;
+  height: 40px;
+  margin: 3px;
+  padding: 0;
+  text-decoration: none;
+  /* padding: 0.2em 0.5em; */
+  border-radius: 15px;
+  color: var(--primary-blue);
+  background-color: var(--secondary-blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.vol:hover {
+  background-color: var(--theme-orange);
+  color: white;
+  cursor: pointer;
+}
+
+.active-vol {
+  background-color: var(--theme-orange) !important;
+}
+
+.show-vol {
+  display: flex;
+}
+
+.vol>a {
   text-decoration: none;
   text-align: center;
   color: var(--theme-white);
@@ -682,7 +762,7 @@ div.infos {
   max-width: 90%;
   width: 340px;
   height: 220px;
-  z-index: 3;
+  z-index: 0;
 }
 
 div.info { 
@@ -697,6 +777,7 @@ div.info {
   background-color: var(--secondary-blue);
   align-items: center;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 div.info > img { 
