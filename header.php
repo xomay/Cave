@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#27187e">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="meubles.css">
     <link href="/css/uicons-regular-rounded.css" rel="stylesheet">
     <title>
         Cave de Paps

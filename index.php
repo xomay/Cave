@@ -347,10 +347,37 @@ session_start();
                         // foreach ($mill_choice as $el){
                         //     echo $el[0];
                         // }
+                        
+                        $chiffres = ["un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", 
+                        "neuf", "dix", "onze", "douze", "treize", "quatorze", "quinze", "seize", "dix-sept",
+                        "dix-huit", "diw-neuf", 'vingt', "vingt-un", "vingt-deux"];
+                        
+                        $statement = $pdo->query("SELECT DISTINCT(ANNEES.id_meuble)
+                                                    FROM ANNEES
+                                                    WHERE ANNEES.id_bouteille = $i;");
+                        if ($statement === FALSE){
+                            die('Erreur SQL');
+                        }
+                        
+                        $result = $statement->fetchAll();
                         // echo '<pre>';
                         // var_dump($result);
                         // echo '<pre>';
-
+                        $meubles = [];
+                        foreach ($result as $key=>$el){
+                            if (strlen($el[0]) > 1){
+                                $current = separateur($el[0], "-");
+                                foreach ($current as $m){
+                                    if (!in_array($m, $meubles)){
+                                        array_push($meubles, $m);
+                                    }
+                                }
+                            }else {
+                                if (!in_array($el[0], $meubles)){
+                                    array_push($meubles, $el[0]);
+                                }
+                            }
+                        }
 
                 ?>
                 <!-- <div class="wine-card <?php echo $region;?> <?php echo $cepage; ?> <?php foreach($mets as $el){ echo $el;}?>">
@@ -443,6 +470,58 @@ session_start();
                                 <img src="img/mets/Viande rouge.png" alt="viande">
                                 <h3>Viandes Rouge</h3>
                             </div>
+                        </div>
+                        <div class="container hide">
+                            <!-- <div class="A">
+                                <div class="un case"></div>
+                                <div class="deux case"></div>
+                                <div class="trois case"></div>
+                                <div class="quatre case"></div>
+                                <div class="cinq case"></div>
+                                <div class="six case"></div>
+                                <div class="sept case"></div>
+                                <div class="huit case "></div>
+                                <div class="neuf case"></div>
+                                <div class="dix case"></div>
+                                <div class="onze case"></div>
+                                <div class="douze case"></div>
+                                <div class="treize case"></div>
+                                <div class="quatorze case"></div>
+                                <div class="quinze case"></div>
+                                <div class="seize case"></div>
+                                <div class="dix-sept case"></div>
+                                <div class="dix-huit case"></div>
+                                <div class="dix-neuf case"></div>
+                                <div class="vingt case"></div>
+                                <div class="vingt-un case"></div>
+                                <div class="vingt-deux case"></div>
+                            </div> -->
+                            <?php foreach ($meubles as $el){ ?>
+                                <div class="meuble <?php echo $el; ?> hide">
+                                    <div class="un case"></div>
+                                    <div class="deux case"></div>
+                                    <div class="trois case"></div>
+                                    <div class="quatre case"></div>
+                                    <div class="cinq case"></div>
+                                    <div class="six case"></div>
+                                    <div class="sept case"></div>
+                                    <div class="huit case "></div>
+                                    <div class="neuf case"></div>
+                                    <div class="dix case"></div>
+                                    <div class="onze case"></div>
+                                    <div class="douze case"></div>
+                                    <div class="treize case"></div>
+                                    <div class="quatorze case"></div>
+                                    <div class="quinze case"></div>
+                                    <div class="seize case"></div>
+                                    <div class="dix-sept case"></div>
+                                    <div class="dix-huit case"></div>
+                                    <div class="dix-neuf case"></div>
+                                    <div class="vingt case"></div>
+                                    <div class="vingt-un case"></div>
+                                    <div class="vingt-deux case"></div>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="bottom-card">

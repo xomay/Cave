@@ -1,0 +1,320 @@
+div.container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 360px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.meuble.A {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px
+    16px 16px 16px 16px 16px 16px 16px;
+    gap: 0px 0px;
+    grid-template-areas: "un"
+        "deux"
+        "trois"
+        "quatre"
+        "cinq"
+        "six"
+        "sept"
+        "huit"
+        "neuf"
+        "dix"
+        "onze"
+        "douze"
+        "treize"
+        "quatorze"
+        "quinze"
+        "seize"
+        "dix-sept"
+        "dix-huit"
+        "dix-neuf"
+        "vingt"
+        "vingt-un"
+        "vingt-deux";
+    width: 250px;
+}   
+
+div.meuble.B {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
+    gap: 0px 0px;
+    grid-template-areas: "un"
+        "deux"
+        "trois"
+        "quatre"
+        "cinq"
+        "six"
+        "sept"
+        "huit"
+        "neuf"
+        "dix"
+        "onze"
+        "douze"
+        "treize"
+        "quatorze"
+        "quinze"
+        "seize"
+        "dix-sept"
+        "dix-huit"
+        "dix-neuf"
+        "vingt"
+        "vingt-un"
+        "vingt-deux";
+    width: 250px;
+}
+
+div.meuble.C {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
+    gap: 0px 0px;
+    grid-template-areas: "un"
+        "deux"
+        "trois"
+        "quatre"
+        "cinq"
+        "six"
+        "sept"
+        "huit"
+        "neuf"
+        "dix"
+        "onze"
+        "douze"
+        "treize"
+        "quatorze"
+        "quinze"
+        "seize"
+        "dix-sept"
+        "dix-huit"
+        "dix-neuf"
+        "vingt"
+        "vingt-un"
+        "vingt-deux";
+    width: 250px;
+}
+
+div.meuble.D {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
+    gap: 0px 0px;
+    grid-template-areas: "un"
+        "deux"
+        "trois"
+        "quatre"
+        "cinq"
+        "six"
+        "sept"
+        "huit"
+        "neuf"
+        "dix"
+        "onze"
+        "douze"
+        "treize"
+        "quatorze"
+        "quinze"
+        "seize"
+        "dix-sept"
+        "dix-huit"
+        "dix-neuf"
+        "vingt"
+        "vingt-un"
+        "vingt-deux";
+    width: 250px;
+}
+
+div.meuble.E {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
+    gap: 0px 0px;
+    grid-template-areas: "un"
+        "deux"
+        "trois"
+        "quatre"
+        "cinq"
+        "six"
+        "sept"
+        "huit"
+        "neuf"
+        "dix"
+        "onze"
+        "douze"
+        "treize"
+        "quatorze"
+        "quinze"
+        "seize"
+        "dix-sept"
+        "dix-huit"
+        "dix-neuf"
+        "vingt"
+        "vingt-un"
+        "vingt-deux";
+    width: 250px;
+}
+
+div.meuble.F {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
+    gap: 0px 0px;
+    grid-template-areas: "un"
+        "deux"
+        "trois"
+        "quatre"
+        "cinq"
+        "six"
+        "sept"
+        "huit"
+        "neuf"
+        "dix"
+        "onze"
+        "douze"
+        "treize"
+        "quatorze"
+        "quinze"
+        "seize"
+        "dix-sept"
+        "dix-huit"
+        "dix-neuf"
+        "vingt"
+        "vingt-un"
+        "vingt-deux";
+    width: 250px;
+}
+
+div.meuble.G {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px 16px;
+    gap: 0px 0px;
+    grid-template-areas: "un"
+        "deux"
+        "trois"
+        "quatre"
+        "cinq"
+        "six"
+        "sept"
+        "huit"
+        "neuf"
+        "dix"
+        "onze"
+        "douze"
+        "treize"
+        "quatorze"
+        "quinze"
+        "seize"
+        "dix-sept"
+        "dix-huit"
+        "dix-neuf"
+        "vingt"
+        "vingt-un"
+        "vingt-deux";
+    width: 250px;
+}
+
+.case {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    background-color: grey;
+}
+
+.active-case {
+    background-color: blue!important;
+}
+
+.un {
+    grid-area: un;
+}
+
+.deux {
+    grid-area: deux;
+}
+
+.trois {
+    grid-area: trois;
+}
+
+.quatre {
+    grid-area: quatre;
+}
+
+.cinq {
+    grid-area: cinq;
+}
+
+.six {
+    grid-area: six;
+}
+
+.sept {
+    grid-area: sept;
+}
+
+.huit {
+    grid-area: huit;
+}
+
+.neuf {
+    grid-area: neuf;
+}
+
+.dix {
+    grid-area: dix;
+}
+
+.onze {
+    grid-area: onze;
+}
+
+.douze {
+    grid-area: douze;
+}
+
+.treize {
+    grid-area: treize;
+}
+
+.quatorze {
+    grid-area: quatorze;
+}
+
+.quinze {
+    grid-area: quinze;
+}
+
+.seize {
+    grid-area: seize;
+}
+
+.dix-sept {
+    grid-area: dix-sept;
+}
+
+.dix-huit {
+    grid-area: dix-huit;
+}
+
+.dix-neuf {
+    grid-area: dix-neuf;
+}
+
+.vingt {
+    grid-area: vingt;
+}
+
+.vingt-un {
+    grid-area: vingt-un;
+}
+
+.vingt-deux {
+    grid-area: vingt-deux;
+}

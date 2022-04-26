@@ -202,6 +202,20 @@ HTML;
         }
     }
 
+    function separateur($text, $sep){
+        $return = [];
+        if (strlen($text) != 1){
+            for ($i = 0; $i < strlen($text); $i++){
+                if ($text[$i] !== $sep){
+                    array_push($return, $text[$i]);
+                }
+            }
+            return $return;
+        }else{
+            return $text;
+        }
+    }
+
 //     function critere_millesime() {
 //         $pdo = new PDO('sqlite:../Db/new_cave.db');
 
