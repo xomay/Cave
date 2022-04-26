@@ -5,12 +5,12 @@ session_start();
 ?>
 <body>
     <!-- scroll="no" style="overflow: hidden" -->
-    <form id="form_values" action="./Db/edit_db.php" method="post" style="width:100;height: 10;">
-        <input type="text" display="block" id="id_bouteille" name="id_bouteille" style="opacity: 100; width:100; height:10;" autocomplete="off">
-        <input type="text" display="block" id="volume" name="volume" style="opacity: 100; width:100; height:10;" autocomplete="off">
-        <input type="text" display="block" id="annee" name="annee" style="opacity: 100; width:100; height:10;" autocomplete="off">
-        <input type="text" display="block" id="note" name="note" style="opacity: 100; width:100; height:10;" autocomplete="off">
-        <input type="text" display="block" id="demande" name="demande" style="opacity: 100; width:100; height:10;" autocomplete="off">
+    <form id="form_values" action="./Db/edit_db.php" method="post" style="width:0;height: 0;">
+        <input type="text" style="display: none;" id="id_bouteille" name="id_bouteille" autocomplete="off">
+        <input type="text" style="display: none;" id="volume" name="volume" autocomplete="off">
+        <input type="text" style="display: none;" id="annee" name="annee" autocomplete="off">
+        <input type="text" style="display: none;" id="note" name="note" autocomplete="off">
+        <input type="text" style="display: none;" id="demande" name="demande" autocomplete="off">
         
     </form>
 
@@ -472,32 +472,8 @@ session_start();
                             </div>
                         </div>
                         <div class="container hide">
-                            <!-- <div class="A">
-                                <div class="un case"></div>
-                                <div class="deux case"></div>
-                                <div class="trois case"></div>
-                                <div class="quatre case"></div>
-                                <div class="cinq case"></div>
-                                <div class="six case"></div>
-                                <div class="sept case"></div>
-                                <div class="huit case "></div>
-                                <div class="neuf case"></div>
-                                <div class="dix case"></div>
-                                <div class="onze case"></div>
-                                <div class="douze case"></div>
-                                <div class="treize case"></div>
-                                <div class="quatorze case"></div>
-                                <div class="quinze case"></div>
-                                <div class="seize case"></div>
-                                <div class="dix-sept case"></div>
-                                <div class="dix-huit case"></div>
-                                <div class="dix-neuf case"></div>
-                                <div class="vingt case"></div>
-                                <div class="vingt-un case"></div>
-                                <div class="vingt-deux case"></div>
-                            </div> -->
-                            <?php foreach ($meubles as $el){ ?>
-                                <div class="meuble <?php echo $el; ?> hide">
+                            <?php foreach ($meubles as $key=>$el){ ?>
+                                <div class="meuble <?php echo $el; ?> <?php if (!$key == 0){echo 'hide';}; ?>">
                                     <div class="un case"></div>
                                     <div class="deux case"></div>
                                     <div class="trois case"></div>
