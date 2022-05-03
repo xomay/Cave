@@ -403,6 +403,10 @@ div.top-card_big {
   justify-content: center;
 }
 
+img.close{
+  display: none;
+}
+
 img.main-bouteille {
   width: auto;
   height: 125%;
