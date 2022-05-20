@@ -399,7 +399,7 @@ session_start();
                 
                 <div id="<?php echo $i?>" class="wine-card <?php echo $region;?> <?php echo $cepage; ?> <?php foreach($mets as $el){ echo $el;}?>">
                     <div class="top-card">
-                        <img src="img/close.png" alt="close-btn" class="close">
+                        <img src="img/close.png" alt="close-btn" class="close hide">
                         <img class="main-bouteille" src="<?php echo $img; ?>" alt="bouteille-vin">
                         <img class="star" src="img/star-orange.png" alt="etoile">
                         <img class="bouteille" src="img/bouteille2.png" alt="img-bouteille">

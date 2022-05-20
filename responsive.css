@@ -23,6 +23,7 @@
         justify-content: left;
         background-color: rgba(229, 213, 205, 0);
         height: 11vw;
+        z-index: 0;
     }
 
     div.plus {
@@ -98,12 +99,23 @@
         margin-left: 5%;
     }
 
-    div.content {
+    div.content-big {
         z-index: 3;
         position: fixed;
         bottom: 0px;
         width: 100%;
         height: 8vh;
+        border-radius: 30px 30px 0px 0px;
+        margin: 0;
+        transition: all 0.3s ease;
+    }
+
+    div.content {
+        z-index: 3;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: 100%;
         border-radius: 30px 30px 0px 0px;
         margin: 0;
         transition: all 0.3s ease;
@@ -134,11 +146,59 @@
     }
 
     ul.next{
-        display: none;
+        width: 90%;
+        height: 40px;
+        top: 6%;
+    }
+
+    li.nav_criteres {
+        transition: all 0.5s ease;
+        text-decoration: none;
+        /* padding: 0.2em 0.5em; */
+        padding: 10px 3vw 10px 3vw;
+        border-radius: 25px;
+    }
+
+    li.nav_criteres>a {
+        text-decoration: none;
+        color: var(--theme-white);
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 4vw;
     }
 
     div.choice {
-        visibility: hidden;
+        display: flex;
+        position: absolute;
+        top: 14%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 90%;
+        width: auto;
+        height: 80%;
+        overflow-y: scroll;
+    }
+
+    button.choice-button {
+        width: 30vw;
+        height: 30vw;
+        border-radius: 15px;
+        border: none;
+        transition: all 0.5s ease;
+        margin: 1.5%;
+        display: none;
+        align-items: center;
+    }
+
+    button.choice-button>img {
+        width: auto;
+        height: 45%;
+    }
+
+    button.choice-button>h3 {
+        color: var(--theme-white);
+        font-size: 3vw;
     }
 
     div.layer { 
@@ -219,6 +279,10 @@
         width: 5vw;
         height: auto;
     }
+
+    .hide {
+        display: none!important;
+    }
     
     
     img.main-bouteille {
@@ -229,7 +293,7 @@
 
     img.main-bouteille_big {
         width: auto;
-        height: 100%;
+        height: 50%;
         position: absolute;
         bottom: 15px;
     }

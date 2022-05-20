@@ -1,4 +1,6 @@
 (function () {
+    var width = window.screen.availWidth
+
     var appellation = document.querySelectorAll('.appellation')
     var cepage = document.querySelectorAll('.cepage')
     for (i = 0; i<appellation.length; i++) {
@@ -274,6 +276,7 @@
     var body = document.querySelector('body')
     body.addEventListener('click', function (e) {
         if (verif == true) {
+            if (width > 925){
             console.log('click', e)
             verif = false
             var current = document.querySelector('.wine-card_big')
@@ -327,7 +330,80 @@
             take_button.classList.add('hide')
             document.querySelector('body').classList.remove('no_scroll')
         }
+        // if (width <= 925){
+            //     var close = current.querySelector('.close')
+            //     close.classList.add('hide')
+            // }
+        }
     })
+
+    var close = document.querySelectorAll('.close')
+    console.log(close)
+    for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener('click', function (e) {
+            console.log(verif)
+            if (verif == true) {
+                if (width <= 925) {
+                    e.stopPropagation()
+                    console.log('click', e)
+                    var current = this.parentNode.parentNode
+                    console.log(current)
+                    current.classList.add('wine-card')
+                    current.classList.remove('wine-card_big')
+                    var top = current.querySelector('.top-card_big')
+                    top.classList.add('top-card')
+                    top.classList.remove('top-card_big')
+                    var main_image = current.querySelector('.main-bouteille_big')
+                    main_image.classList.add('main-bouteille')
+                    main_image.classList.remove('main-bouteille_big')
+                    var star = current.querySelector('.star_big')
+                    star.classList.add('star')
+                    star.classList.remove('star_big')
+                    var bouteille = current.querySelector('.bouteille_big')
+                    bouteille.classList.add('bouteille')
+                    bouteille.classList.remove('bouteille_big')
+                    var note = current.querySelector('.note')
+                    note.classList.remove('hide')
+                    var nombre = current.querySelector('.nombre')
+                    nombre.classList.remove('hide')
+                    var all_millesime = current.querySelector('.all_millesime')
+                    all_millesime.classList.add('hide')
+                    var domaine = current.querySelector('.domaine')
+                    domaine.classList.remove('hide')
+                    var millesime = current.querySelector('.millesime')
+                    millesime.classList.remove('hide')
+                    var vol_content = current.querySelector('.vol-content')
+                    vol_content.classList.add('hide')
+                    var choice_millesime = current.querySelector('.millesime_choice')
+                    choice_millesime.classList.add('hide')
+                    var btn = current.querySelector('.dropbtn')
+                    btn.classList.remove('current')
+                    var infos = current.querySelector('.infos')
+                    infos.classList.add('hide')
+                    var container = current.querySelector('.container')
+                    container.classList.add('hide')
+                    var bottom = current.querySelector('.bottom-card_big')
+                    bottom.classList.add('bottom-card')
+                    bottom.classList.remove('bottom-card_big')
+                    var domaine_bottom = current.querySelector('.domaine_bottom')
+                    domaine_bottom.classList.add('hide')
+                    var appellation = current.querySelector('.appellation_big')
+                    appellation.classList.add('appellation')
+                    appellation.classList.remove('appellation_big')
+                    var appellation = current.querySelector('.appellation')
+                    appellation.classList.remove('hide')
+                    var cepage = current.querySelector('.cepage')
+                    cepage.classList.remove('hide')
+                    var take_button = current.querySelector('.take-button')
+                    take_button.classList.add('hide')
+                    document.querySelector('body').classList.remove('no_scroll')
+                    var close = current.querySelector('.close')
+                    close.classList.add('hide')
+                    verif = false
+                }
+            }
+        })
+    }
     
     var wines = document.querySelectorAll('.wine-card')
     var main = document.querySelector('main')
@@ -432,6 +508,10 @@
                 var take_button = this.querySelector('.take-button')
                 take_button.classList.remove('hide')
                 document.querySelector('body').classList.add('no_scroll')
+                if (width <= 925) {
+                    var close = this.querySelector('.close')
+                    close.classList.remove('hide')
+                }
                 verif = true
             }
             // main.classList.add('blur')
