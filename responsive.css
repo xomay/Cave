@@ -13,6 +13,10 @@
     --theme-white: rgb(241, 242, 246);
     }
 
+    body {
+        overflow: hidden;
+    }
+
     nav{
         /* visibility: hidden;
         height: 1px; */
@@ -181,8 +185,8 @@
     }
 
     button.choice-button {
-        width: 30vw;
-        height: 30vw;
+        width: 40vw;
+        height: 40vw;
         border-radius: 15px;
         border: none;
         transition: all 0.5s ease;
