@@ -3,7 +3,7 @@ require 'header.php';
 require_once 'fonctions.php';
 session_start();
 ?>
-<body>
+<body class="">
     <!-- scroll="no" style="overflow: hidden" -->
     <form id="form_values" action="./Db/edit_db.php" method="post" style="width:0;height: 0;">
         <input type="text" style="display: none;" id="id_bouteille" name="id_bouteille" autocomplete="off">
@@ -37,17 +37,19 @@ session_start();
                 <h3>Mes Vins</h3>
             </div>
             <div class="content" id="content">
-                <div class="straight"></div>
+                <div class="dragbox">
+                    <div class="straight"></div>
+                </div>
                 <!-- <h3>Critères</h3> -->
                 <!-- <button class="next">1/3 -></button> -->
                 <!-- <div> -->
-                <ul class="next">
+                <ul class="next hide">
                     <li class="nav_criteres active" ><a href="#mets">Mets</a></li>
                     <li class="nav_criteres" ><a href="#region">Regions</a></li>
                     <li class="nav_criteres" ><a href="#cepage">Cepages</a></li>
                     <li class="nav_criteres" ><a href="#millesime">Millesimes</a></li>
                 </ul>
-                <div class="choice" id="choice">
+                <div class="choice hide" id="choice">
                     <!-- <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meatWhite.png" alt="viande">
                         <h3>Viandes Rouges</h3>

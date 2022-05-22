@@ -737,6 +737,25 @@
         })
     }
 
+    var dragbox = document.querySelector('.dragbox')
+    dragbox.addEventListener('click', function(e){
+        var content = document.querySelector('#content')
+        var next = document.querySelector('.next')
+        var choice = document.querySelector('.choice')
+        if (content.classList.contains('content')){
+            console.log('enter')
+            content.classList.add('content-big')
+            content.classList.remove('content')
+            next.classList.remove('hide')
+            choice.classList.remove('hide')
+        }else {
+            content.classList.remove('content-big')
+            content.classList.add('content')
+            next.classList.add('hide')
+            choice.classList.add('hide')
+        }
+    })
+
 
 })()
 
