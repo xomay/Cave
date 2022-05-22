@@ -746,13 +746,13 @@
             console.log('enter')
             content.classList.add('content-big')
             content.classList.remove('content')
-            next.classList.remove('hide')
-            choice.classList.remove('hide')
+            next.classList.remove('hide_resp')
+            choice.classList.remove('hide_resp')
         }else {
             content.classList.remove('content-big')
             content.classList.add('content')
-            next.classList.add('hide')
-            choice.classList.add('hide')
+            next.classList.add('hide_resp')
+            choice.classList.add('hide_resp')
         }
     })
 

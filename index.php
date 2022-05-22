@@ -43,13 +43,13 @@ session_start();
                 <!-- <h3>Critères</h3> -->
                 <!-- <button class="next">1/3 -></button> -->
                 <!-- <div> -->
-                <ul class="next hide">
+                <ul class="next hide_resp">
                     <li class="nav_criteres active" ><a href="#mets">Mets</a></li>
                     <li class="nav_criteres" ><a href="#region">Regions</a></li>
                     <li class="nav_criteres" ><a href="#cepage">Cepages</a></li>
                     <li class="nav_criteres" ><a href="#millesime">Millesimes</a></li>
                 </ul>
-                <div class="choice hide" id="choice">
+                <div class="choice hide_resp" id="choice">
                     <!-- <button class="choice-button" :class="{check : valid, uncheck : !valid}" @click="check">
                         <img src="img/meatWhite.png" alt="viande">
                         <h3>Viandes Rouges</h3>
