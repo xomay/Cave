@@ -882,6 +882,8 @@ div.take-button{
   align-items: center;
   top: 0;
   left: 0;
+  right: unset;
+  bottom: unset;
   width: 100%;
   height: 100%;
 }
