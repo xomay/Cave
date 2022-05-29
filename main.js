@@ -79,7 +79,7 @@
                     for (var i = 0; i < criteres.length; i ++) {
                         if (criteres[i] == info){
                             if (i == 0){
-                                criteres.shift();
+                                criteres.shift();//supprime le 1er el du tableau
                             }else {
                                 criteres.splice(i,i);
                             }
