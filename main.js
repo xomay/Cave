@@ -55,6 +55,18 @@
             }
         })
     }
+
+    function application(card, criteres) {
+        if (!criteres.length == 0){
+            for (var j = 0; j < criteres.length; j++) {
+                if (!card.classList.contains(criteres[j])) {
+                    return false
+                }
+            }
+        }
+        console.log("here :", card)
+        card.classList.add('active-card')
+    }
     
     var choices = document.querySelectorAll('.choice-button')
     var criteres = []
@@ -85,10 +97,17 @@
                             }
                         }
                     }
-                    var el = div.querySelectorAll(selecteur)
-                    for (var i = 0; i < el.length; i++){
-                        el[i].classList.remove('active-card')
+
+                    
+                    for (var i = 0; i < cards.length; i++) {
+                        cards[i].classList.remove('active-card')
+                        application(cards[i], criteres);
                     }
+
+                    // var el = div.querySelectorAll(selecteur)
+                    // for (var i = 0; i < el.length; i++){
+                    //     el[i].classList.remove('active-card')
+                    // }
     
                     if (criteres.length == 0 && annees.length == 0){
                         for (var i = 0; i < cards.length; i++) {
@@ -97,25 +116,33 @@
                     }
                     
                     
-                    console.log(criteres)
+                    console.log("criteres : ", criteres)
+                    console.log("annees : ", annees)
                     console.log('False return')
                     return false
                 }
+
+
                 if (criteres.length == 0){
                     for (var i = 0; i < cards.length; i++) {
                         cards[i].classList.remove('active-card')
                     } // cache toutes les bouteilles pour afficher que celles voulus
                 }
                 
-                var el = div.querySelectorAll(selecteur)
-                for (var i = 0; i < el.length; i++) {
-                    el[i].classList.add('active-card')
-                }
+                // var el = div.querySelectorAll(selecteur)
+                // for (var i = 0; i < el.length; i++) {
+                //     el[i].classList.add('active-card')
+                // }
                 
                 var div = this.parentNode
                 criteres.push(info)
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].classList.remove('active-card')
+                    application(cards[i], criteres);
+                }
                 console.log('done')
-                // console.log(div)
+                console.log("criteres : ", criteres)
+                console.log("annees : ", annees)
                 this.classList.add('select')
             }else {
 
@@ -141,6 +168,8 @@
                             }
                         }
                     }
+                    console.log("annees : ", annees)
+                    console.log("criteres : ", criteres)
 
                     switch (info) {
                         case '1':
@@ -191,9 +220,10 @@
                     }
 
 
-                    console.log(criteres)
+                    console.log("criteres : ", criteres)
+                    console.log("annees : ", annees)
                     console.log('False return')
-                    return false
+                    return false //ne fait pas la suite (remplace le else)
                 }
                 if (criteres.length == 0 && annees.length == 0) {
                     for (var i = 0; i < cards.length; i++) {
@@ -251,6 +281,8 @@
                 var div = this.parentNode
                 annees.push(info)
                 this.classList.add('select')
+                console.log("criteres : ", criteres)
+                console.log("annees : ", annees)
 
             }
 
@@ -523,7 +555,6 @@
     function test(){
         console.log('test')
     }
-    
     // criteres.push("info")
     var choices = document.querySelectorAll('.choice-button')
     // for (var i = 0; i < choices.length; i ++){
