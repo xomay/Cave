@@ -56,7 +56,10 @@
         })
     }
 
-    function application(card, criteres) {
+    function application(card, criteres, annees) {
+        var current_year = new Date()
+        current_year = current_year.getFullYear() 
+
         if (!criteres.length == 0){
             for (var j = 0; j < criteres.length; j++) {
                 if (!card.classList.contains(criteres[j])) {
@@ -64,7 +67,90 @@
                 }
             }
         }
-        console.log("here :", card)
+        if (!annees.length == 0){
+            if (annees.includes('1') && annees.length == 1){
+                //cas -5 ans
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                if (diff > 5) {
+                    return false
+                }
+            }else if (annees.includes('5') && annees.length == 1) {
+                //cas 5-10 ans
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                if (diff < 5 || diff > 10) {
+                    return false
+                }
+            }else if (annees.includes('10') && annees.length == 1) {
+                //cas 10-20 ans
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                console.log(diff)
+                if (diff < 10 || diff > 20) {
+                    console.log('false')
+                    return false
+                }
+            }
+            else if (annees.includes('20') && annees.length == 1) {
+                //cas +20 ans
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                if (diff < 20) {
+                    return false
+                }
+            }else if (annees.includes('1') && annees.includes('5') && annees.length == 2) {
+                //cas moins de 10 ans
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                if (diff > 10) {
+                    return false
+                }
+            }else if (annees.includes('1') && annees.includes('5') && annees.includes('10') &&
+             annees.length == 3) {
+                 //cas -20 ans
+                 y = card.querySelector('.millesime').textContent
+                 var diff = current_year - y
+                 if (diff > 20) {
+                     return false
+                    }
+            }else if (annees.includes('5') && annees.includes('10') &&
+                annees.length == 2) {
+                //cas 5-20 ans
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                if (diff > 20 || diff < 5) {
+                    return false
+                }
+            }else if (annees.includes('5') && annees.includes('10') && annees.includes('20') &&
+                annees.length == 3) {
+                //cas 5 +20 ans
+                console.log('cas +20')
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                if (diff < 5) {
+                    return false
+                }
+            }
+            else if (annees.includes('10') && annees.includes('20') &&
+                annees.length == 2) {
+                //cas 10 +20 ans
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                if (diff < 10) {
+                    return false
+                }
+            }
+            else if (annees.includes('1') && annees.includes('5') && annees.includes('10') &&
+            annees.includes('20') && annees.length == 2) {
+                // console.log('cas tous les ans')
+                y = card.querySelector('.millesime').textContent
+                var diff = current_year - y
+                //Toutes les bouteilles sont comprises
+            }else{
+                return false
+            }
+        }
         card.classList.add('active-card')
     }
     
@@ -101,7 +187,7 @@
                     
                     for (var i = 0; i < cards.length; i++) {
                         cards[i].classList.remove('active-card')
-                        application(cards[i], criteres);
+                        application(cards[i], criteres,annees);
                     }
 
                     // var el = div.querySelectorAll(selecteur)
@@ -123,11 +209,11 @@
                 }
 
 
-                if (criteres.length == 0){
-                    for (var i = 0; i < cards.length; i++) {
-                        cards[i].classList.remove('active-card')
-                    } // cache toutes les bouteilles pour afficher que celles voulus
-                }
+                // if (criteres.length == 0){
+                //     for (var i = 0; i < cards.length; i++) {
+                //         cards[i].classList.remove('active-card')
+                //     } // cache toutes les bouteilles pour afficher que celles voulus
+                // }
                 
                 // var el = div.querySelectorAll(selecteur)
                 // for (var i = 0; i < el.length; i++) {
@@ -138,7 +224,7 @@
                 criteres.push(info)
                 for (var i = 0; i < cards.length; i++) {
                     cards[i].classList.remove('active-card')
-                    application(cards[i], criteres);
+                    application(cards[i], criteres, annees);
                 }
                 console.log('done')
                 console.log("criteres : ", criteres)
@@ -171,52 +257,59 @@
                     console.log("annees : ", annees)
                     console.log("criteres : ", criteres)
 
-                    switch (info) {
-                        case '1':
-                            console.log('case 1')
-                            var el = div.querySelectorAll('.wine-card')
-                            for (var i = 0; i < el.length; i++) {
-                                y = el[i].querySelector('.millesime').textContent
-                                if (current_year - y <= 5) {
-                                    el[i].classList.remove('active-card')
-                                }
-                            }
-                            break;
-                        case '5':
-                            var el = div.querySelectorAll('.wine-card')
-                            for (var i = 0; i < el.length; i++) {
-                                y = el[i].querySelector('.millesime').textContent
-                                if (current_year - y >= 5 && current_year - y <= 10) {
-                                    el[i].classList.remove('active-card')
-                                }
-                            }
-                            break;
-                        case '10':
-                            var el = div.querySelectorAll('.wine-card')
-                            for (var i = 0; i < el.length; i++) {
-                                y = el[i].querySelector('.millesime').textContent
-                                if (current_year - y >= 10 && current_year - y <= 20) {
-                                    el[i].classList.remove('active-card')
-                                }
-                            }
-                            break;
-                        case '20':
-                            var el = div.querySelectorAll('.wine-card')
-                            for (var i = 0; i < el.length; i++) {
-                                y = el[i].querySelector('.millesime').textContent
-                                if (current_year - y >= 20) {
-                                    el[i].classList.remove('active-card')
-                                }
-                            }
-                            break;
-                        default:
-                            console.log('default')
-                    }
+                    
+
+                    // switch (info) {
+                    //     case '1':
+                    //         console.log('case 1')
+                    //         var el = div.querySelectorAll('.wine-card')
+                    //         for (var i = 0; i < el.length; i++) {
+                    //             y = el[i].querySelector('.millesime').textContent
+                    //             if (current_year - y <= 5) {
+                    //                 el[i].classList.remove('active-card')
+                    //             }
+                    //         }
+                    //         break;
+                    //     case '5':
+                    //         var el = div.querySelectorAll('.wine-card')
+                    //         for (var i = 0; i < el.length; i++) {
+                    //             y = el[i].querySelector('.millesime').textContent
+                    //             if (current_year - y >= 5 && current_year - y <= 10) {
+                    //                 el[i].classList.remove('active-card')
+                    //             }
+                    //         }
+                    //         break;
+                    //     case '10':
+                    //         var el = div.querySelectorAll('.wine-card')
+                    //         for (var i = 0; i < el.length; i++) {
+                    //             y = el[i].querySelector('.millesime').textContent
+                    //             if (current_year - y >= 10 && current_year - y <= 20) {
+                    //                 el[i].classList.remove('active-card')
+                    //             }
+                    //         }
+                    //         break;
+                    //     case '20':
+                    //         var el = div.querySelectorAll('.wine-card')
+                    //         for (var i = 0; i < el.length; i++) {
+                    //             y = el[i].querySelector('.millesime').textContent
+                    //             if (current_year - y >= 20) {
+                    //                 el[i].classList.remove('active-card')
+                    //             }
+                    //         }
+                    //         break;
+                    //     default:
+                    //         console.log('default')
+                    // }
 
                     if (criteres.length == 0 && annees.length == 0) {
                         for (var i = 0; i < cards.length; i++) {
                             cards[i].classList.add('active-card')
-                        } // cache toutes les bouteilles pour afficher que celles voulus 
+                        }
+                    }else{
+                        for (var i = 0; i < cards.length; i++) {
+                            cards[i].classList.remove('active-card')
+                            application(cards[i], criteres, annees);
+                        }
                     }
 
 
@@ -225,6 +318,7 @@
                     console.log('False return')
                     return false //ne fait pas la suite (remplace le else)
                 }
+
                 if (criteres.length == 0 && annees.length == 0) {
                     for (var i = 0; i < cards.length; i++) {
                         cards[i].classList.remove('active-card')
@@ -234,52 +328,58 @@
                 console.log(current_year)
                 console.log('info : ',info)
 
-                switch (info){
-                    case '1':
-                        console.log('case 1')
-                        var el = div.querySelectorAll('.wine-card')
-                        for (var i = 0; i < el.length; i++) {
-                            y = el[i].querySelector('.millesime').textContent
-                            if (current_year-y <= 5){
-                                el[i].classList.add('active-card')
-                            }
-                        }
-                        break;
-                    case '5':
-                        var el = div.querySelectorAll('.wine-card')
-                        for (var i = 0; i < el.length; i++) {
-                            y = el[i].querySelector('.millesime').textContent
-                            if (current_year - y >= 5 && current_year - y <= 10) {
-                                el[i].classList.add('active-card')
-                            }
-                        }
-                        break;
-                    case '10':
-                        var el = div.querySelectorAll('.wine-card')
-                        for (var i = 0; i < el.length; i++) {
-                            y = el[i].querySelector('.millesime').textContent
-                            if (current_year - y >= 10 && current_year - y <= 20) {
-                                el[i].classList.add('active-card')
-                            }
-                        }
-                        break;
-                    case '20':
-                        var el = div.querySelectorAll('.wine-card')
-                        for (var i = 0; i < el.length; i++) {
-                            y = el[i].querySelector('.millesime').textContent
-                            if (current_year - y >= 20) {
-                                el[i].classList.add('active-card')
-                            }
-                        }
-                        break;
-                    default:
-                        console.log('default')
-                }
+                // switch (info){
+                //     case '1':
+                //         console.log('case 1')
+                //         var el = div.querySelectorAll('.wine-card')
+                //         for (var i = 0; i < el.length; i++) {
+                //             y = el[i].querySelector('.millesime').textContent
+                //             if (current_year-y <= 5){
+                //                 el[i].classList.add('active-card')
+                //             }
+                //         }
+                //         break;
+                //     case '5':
+                //         var el = div.querySelectorAll('.wine-card')
+                //         for (var i = 0; i < el.length; i++) {
+                //             y = el[i].querySelector('.millesime').textContent
+                //             if (current_year - y >= 5 && current_year - y <= 10) {
+                //                 el[i].classList.add('active-card')
+                //             }
+                //         }
+                //         break;
+                //     case '10':
+                //         var el = div.querySelectorAll('.wine-card')
+                //         for (var i = 0; i < el.length; i++) {
+                //             y = el[i].querySelector('.millesime').textContent
+                //             if (current_year - y >= 10 && current_year - y <= 20) {
+                //                 el[i].classList.add('active-card')
+                //             }
+                //         }
+                //         break;
+                //     case '20':
+                //         var el = div.querySelectorAll('.wine-card')
+                //         for (var i = 0; i < el.length; i++) {
+                //             y = el[i].querySelector('.millesime').textContent
+                //             if (current_year - y >= 20) {
+                //                 el[i].classList.add('active-card')
+                //             }
+                //         }
+                //         break;
+                //     default:
+                //         console.log('default')
+                // }
 
 
 
                 var div = this.parentNode
                 annees.push(info)
+
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].classList.remove('active-card')
+                    application(cards[i], criteres, annees);
+                }
+
                 this.classList.add('select')
                 console.log("criteres : ", criteres)
                 console.log("annees : ", annees)
